@@ -1,0 +1,40 @@
+<project version="XMLPRJ01.ACL">
+  <author />
+  <description xml:space="preserve" />
+  <location>C:\Users\shahed_khalili\Documents\Importer</location>
+  <model>
+    <location>C:\Users\shahed_khalili\Documents\Importer\Employee.xmod</location>
+  </model>
+  <inputs>
+    <main>
+      <report>
+        <location>C:\Users\shahed_khalili\Documents\Importer\Employees.pdf</location>
+      </report>
+    </main>
+  </inputs>
+  <state>
+    <view>
+      <open_windows>r_0_ws_2_n_n_1385_692_1385_692_1385_692_1385_692|t_ws_2_n_n_1385_692_1385_692_1385_692_1385_692:current</open_windows>
+    </view>
+  </state>
+  <exports>
+    <export type="custom">
+      <data_page view="table">
+        <name>Export1</name>
+        <table />
+      </data_page>
+      <file_page>
+        <files_in_folder>false</files_in_folder>
+        <location />
+        <when_exists>overwrite</when_exists>
+      </file_page>
+      <table_page>
+        <when_exists>overwrite</when_exists>
+      </table_page>
+      <extension customType="AclExport" tablename="Output" targetfolder="C:\Users\shahed_khalili\Documents\Importer\temp\" targetname="output" />
+    </export>
+  </exports>
+  <audit>
+    <save action="Created" author="shahed_khalili" time="2013-06-14T16:01:11" />
+  </audit>
+</project>

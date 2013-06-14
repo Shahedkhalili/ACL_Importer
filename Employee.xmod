@@ -1,0 +1,240 @@
+<model version="XMLMOD03.ACL">
+  <location>C:\Users\shahed_khalili\Documents\Importer</location>
+  <author />
+  <description xml:space="preserve" />
+  <settings>
+    <input>
+      <date_pattern>D/M/Y</date_pattern>
+      <first_year_of_century>50</first_year_of_century>
+      <active_patterns>D,DT,T</active_patterns>
+      <decimal_char>.</decimal_char>
+      <leading_chars>0</leading_chars>
+      <ignore_form_feeds>false</ignore_form_feeds>
+      <ignore_ctrl_chars>false</ignore_ctrl_chars>
+      <input_encoding>ANSI</input_encoding>
+      <input_ascii>false</input_ascii>
+      <case_sensitive_traps>false</case_sensitive_traps>
+      <trap_char_type>E</trap_char_type>
+      <auto_trim>false</auto_trim>
+      <force_break max_page_lines="100" />
+      <pdf_profile output_points="3" output_points_tenths="0" free_form="false" fixed_font="false" autoCropLevel="0" library_version="3.0.0.0" />
+    </input>
+    <grid suppress_zero="false" null_as="(Null)">
+      <table header_lines="1" data_lines="1" />
+    </grid>
+    <comment_position>top</comment_position>
+    <views>
+      <report>
+        <font face="Courier New" size="10" color="0" />
+      </report>
+      <table>
+        <font face="Tahoma" size="10" color="0" />
+      </table>
+      <summary>
+        <font face="Tahoma" size="10" color="0" />
+      </summary>
+    </views>
+    <export>
+      <dbf_field_naming>false</dbf_field_naming>
+      <database>
+        <summary names_from_fields="false" />
+      </database>
+      <text names_row="false" spacing="false" pad_with_zeros="false" character_set="ANSI" eof="false">
+        <delimited character="," quoted="false" names_row_quotes="false" format_dates_with_dashes="false" />
+      </text>
+      <excel apply_formatting="true" enable_advanced="true" />
+    </export>
+    <time_intervals>
+      <year format_mask="&amp;[yyyy]" />
+      <halfyear format_mask="H&amp;[halfyear]-&amp;[yy]" />
+      <quarter format_mask="Q&amp;[qtr]-&amp;[yy]" />
+      <month format_mask="&amp;[monthname]-&amp;[yy]" />
+      <week format_mask="W&amp;[week]-&amp;[yy]" start_day="0" partial_first_week_is_1="false" />
+      <day format_mask="&amp;[dayofyear]" />
+      <iso_year format_mask="&amp;[isoyear]" />
+      <iso_week format_mask="&amp;[isoyear]-W&amp;[isoweek]" />
+      <fiscal_year format_mask="FY&amp;[fendyear]" year_type="month_based" start_or_end="start_on_first_of_month" reference_month="1" reference_day="1" />
+      <fiscal_halfyear format_mask="FH&amp;[fhalfyear]-&amp;[fendyy]" />
+      <fiscal_quarter format_mask="FQ&amp;[fqtr]-&amp;[fendyy]" />
+      <fiscal_period format_mask="FP&amp;[fperiod]-&amp;[fendyy]" period_type="calendar_months" period_of_53rd_week="12" />
+      <fiscal_week format_mask="FW&amp;[fweek]-&amp;[fendyy]" start_day="0" partial_first_week_is_1="false" />
+    </time_intervals>
+  </settings>
+  <page_setups>
+    <page_setup view="R" portrait="false">
+      <margins top="100" bottom="100" left="100" right="100" />
+      <export>
+        <size>1</size>
+        <portrait>false</portrait>
+      </export>
+    </page_setup>
+    <page_setup view="T" portrait="false">
+      <header>
+        <text xml:space="preserve" />
+      </header>
+      <footer>
+        <text xml:space="preserve" />
+      </footer>
+      <margins top="100" bottom="100" left="100" right="100" />
+      <options>
+        <gridlines>true</gridlines>
+        <column_titles>true</column_titles>
+        <row_numbers>true</row_numbers>
+      </options>
+      <export>
+        <size>1</size>
+        <portrait>false</portrait>
+      </export>
+    </page_setup>
+    <page_setup view="S" portrait="true">
+      <header>
+        <text xml:space="preserve" />
+      </header>
+      <footer>
+        <text xml:space="preserve" />
+      </footer>
+      <margins top="100" bottom="100" left="100" right="100" />
+      <options>
+        <gridlines>true</gridlines>
+        <column_titles>true</column_titles>
+        <row_numbers>true</row_numbers>
+        <repeat>true</repeat>
+      </options>
+      <export>
+        <size>1</size>
+        <portrait>false</portrait>
+      </export>
+    </page_setup>
+  </page_setups>
+  <templates>
+    <template>
+      <name>Detail</name>
+      <level_type>detail</level_type>
+      <number>11</number>
+      <is_float>false</is_float>
+      <is_multicolumn>false</is_multicolumn>
+      <trap_line>1</trap_line>
+      <mask>                                                                                                                                                                    .</mask>
+      <sample>
+        <line>                   Will             Harris                               8590-1247-8127-0120                      201 11/30/2001             79250            $9,722.57</line>
+      </sample>
+    </template>
+  </templates>
+  <fields>
+    <table_field style="report">
+      <name>First_Name</name>
+      <size>16</size>
+      <type>C</type>
+      <sequence>1</sequence>
+      <display_length>16</display_length>
+      <alignment>L</alignment>
+      <verify left="true" right="true" type="true" />
+      <input>
+        <level>11</level>
+        <length>16</length>
+        <line>1</line>
+        <offset>20</offset>
+      </input>
+    </table_field>
+    <table_field style="report">
+      <name>Last_Name</name>
+      <size>21</size>
+      <type>C</type>
+      <sequence>2</sequence>
+      <display_length>21</display_length>
+      <alignment>L</alignment>
+      <verify left="true" right="true" type="true" />
+      <input>
+        <level>11</level>
+        <length>21</length>
+        <line>1</line>
+        <offset>37</offset>
+      </input>
+    </table_field>
+    <table_field style="report">
+      <name>Card_Number</name>
+      <size>19</size>
+      <type>C</type>
+      <sequence>3</sequence>
+      <display_length>19</display_length>
+      <alignment>L</alignment>
+      <verify left="true" right="true" type="true" />
+      <input>
+        <level>11</level>
+        <length>19</length>
+        <line>1</line>
+        <offset>74</offset>
+      </input>
+    </table_field>
+    <table_field style="report">
+      <name>Employee_Num</name>
+      <size>18</size>
+      <type>N</type>
+      <decimal>0</decimal>
+      <format_type>0</format_type>
+      <sequence>4</sequence>
+      <display_length>15</display_length>
+      <alignment>R</alignment>
+      <verify left="true" right="true" type="true" />
+      <input>
+        <level>11</level>
+        <length>15</length>
+        <line>1</line>
+        <offset>104</offset>
+      </input>
+    </table_field>
+    <table_field style="report">
+      <name>Date_Employed</name>
+      <size>12</size>
+      <type>C</type>
+      <sequence>5</sequence>
+      <display_length>12</display_length>
+      <alignment>L</alignment>
+      <verify left="true" right="true" type="true" />
+      <input>
+        <level>11</level>
+        <length>12</length>
+        <line>1</line>
+        <offset>119</offset>
+      </input>
+    </table_field>
+    <table_field style="report">
+      <name>Salary</name>
+      <size>18</size>
+      <type>N</type>
+      <decimal>0</decimal>
+      <format_type>2</format_type>
+      <sequence>6</sequence>
+      <display_length>14</display_length>
+      <alignment>R</alignment>
+      <verify left="true" right="true" type="true" />
+      <input>
+        <level>11</level>
+        <length>14</length>
+        <line>1</line>
+        <offset>133</offset>
+      </input>
+    </table_field>
+    <table_field style="report">
+      <name>Bonus</name>
+      <size>18</size>
+      <type>N</type>
+      <decimal>2</decimal>
+      <format_type>2</format_type>
+      <sequence>7</sequence>
+      <display_length>20</display_length>
+      <alignment>R</alignment>
+      <verify left="true" right="true" type="true" />
+      <input>
+        <level>11</level>
+        <length>20</length>
+        <line>1</line>
+        <offset>148</offset>
+      </input>
+    </table_field>
+  </fields>
+  <charts />
+  <audit>
+    <save action="Created" author="shahed_khalili" time="2013-06-14T16:01:05" />
+  </audit>
+</model>
